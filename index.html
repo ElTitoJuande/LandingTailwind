@@ -9,7 +9,54 @@
 </head>
 
 <body>
-    <h1 class="text-4xl font-bold underline bg-green-500 text-white font-lobster">Clínica Veterinaria Ruteña</h1>
+    <div class="mx-auto">
+        <nav class="bg-lime-200 flex justify-between lg:justify-start items-center">
+            <div class="logo p-2 w-1/6">
+                <img src="./img/clinicaLogo.png" width="100" alt="">
+            </div>
+            <div class="links lg:block hidden w-1/6 md:w-4/6">
+                <ul class="menu flex items-center justify-center gap-5">
+                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Servicios</a></li>
+                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Instalaciones</a></li>
+                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Promociones</a></li>
+                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Quiénes somos</a></li></li>
+                    <li><a href="#" class="border-4 border-amber-800 text-black font-bold p-2 rounded-full hover:bg-yellow-600 hover:text-white transition duration-500">Contacto</a></li></li>
+                </ul>
+            </div>
+            <div class="block lg:hidden w-1/6 lg:w-4/6">
+                <a href="#" class="text-black block p-5 font-bold hover:text-amber-800" id="mobile-menu">Menú</a>
+                <ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-lime-200">
+                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Servicios</a></li>
+                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Instalaciones</a></li>
+                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Promociones</a></li>
+                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Quiénes somos</a></li></li>
+                    <li><a href="#" class="my-4 inline-block border-4 border-amber-800 text-black font-bold p-2 rounded-full hover:bg-yellow-600 hover:text-white transition duration-500">Contacto</a></li></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="header">
+            <img src="img/exoticos.jpg" alt="">
+        </section>
+        <section>
+            <div class="bg-[url(/img/patitasAnimales-removebg-preview.png)] h-35 bg-repeat-x relative -top-20"></div>
+            <div class="bg-[url(/img/patitasAnimales-removebg-preview.png)] h-35 bg-repeat-x relative -top-27">  <!-- scale-y-[-1] -->
+                <a href="#" class="inline-block py-3 px-16 bg-lime-300 text-black font-bold border-transparent border-4 text-2xl rounded-3xl hover:border-amber-800 hover:bg-lime-200 transition duration-500">Servicios</a>
+                <a href="#" class="inline-block py-3 px-16 bg-black text-white font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-gray-400 hover:bg-white hover:text-black transition duration-500">Equipo humano</a>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+
+        const menuButton= document.querySelector('#mobile-menu')
+
+        menuButton.addEventListener('click', e  =>{
+            const menu = document.querySelector('.mobile-links');
+
+            menu.classList.toggle('hidden');
+        })
+
+    </script>
 </body>
 
 </html>
