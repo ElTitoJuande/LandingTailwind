@@ -14,13 +14,24 @@ $marron: rgba(65, 51, 47, 1);
     background-image: url('../img/caracol.png');
     background-size: cover;
     background-position: center;
-    /* border: 2px solid black; */
-    /* clip-path: circle(50%); */
-    /* border-radius: 50%;  */
     position: fixed;
     z-index: 1;
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: transform 0, 3s ease-out;
     will-change: transform;
+}
+ 
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.snap-x {
+    scroll-snap-type: x mandatory;
+}
+.snap-center {
+    scroll-snap-align: center;
 }
