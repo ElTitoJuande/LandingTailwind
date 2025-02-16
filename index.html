@@ -6,88 +6,539 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <title>Clínica Veterinaria Ruteña</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <div class=" mx-auto">
-        <nav class="bg-gray-200 flex justify-between lg:justify-start items-center">
-            <div class="logo p-2 w-1/6">
-                <img src="./img/clinicaLogoo.jpg" width="100" alt="">
-            </div>
-            <div class="links lg:block hidden w-1/6 md:w-4/6">
-                <ul class="menu flex items-center justify-center gap-5">
-                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Servicios</a></li>
-                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Instalaciones</a></li>
-                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Promociones</a></li>
-                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Quiénes somos</a></li>
-                    </li>
-                    <li><a href="#"
-                            class="border-4 border-amber-800 text-black font-bold p-2 rounded-full hover:bg-yellow-600 hover:text-white transition duration-500">Contacto</a>
-                    </li>
-                    </li>
-                </ul>
-            </div>
-            <div class="block lg:hidden w-1/6 lg:w-4/6">
-                <a href="#" class="text-black block p-5 font-bold hover:text-amber-800" id="mobile-menu">Menú</a>
-                <ul class="mobile-links hidden w-full absolute z-50 left-0 text-center bg-gray-200">
-                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Servicios</a></li>
-                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Instalaciones</a></li>
-                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Promociones</a></li>
-                    <li><a href="#" class="text-black block p-5 font-bold hover:text-amber-800">Quiénes somos</a></li>
-                    </li>
-                    <li><a href="#"
-                            class="my-4 inline-block border-4 border-amber-800 text-black font-bold p-2 rounded-full hover:bg-yellow-600 hover:text-white transition duration-500">Contacto</a>
-                    </li>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <section class="header">
-            <img src="img/exoticos.jpg" alt="" class="w-full">
-        </section>
-        <section>
-            <div class="bg-[url(/img/patitasAnimales-removebg-preview.png)] h-35 bg-repeat-x relative "></div>
-            <div
-                class="bg-[url(/img/patitasAnimales-removebg-preview.png)] h-35 bg-repeat-x relative  flex justify-center space-x-4">
-                <!-- scale-y-[-1] -->
-                <a href="#"
-                    class="inline-block max-h-20 py-3 px-16 bg-lime-300 text-black font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-amber-800 hover:bg-lime-200 transition duration-500">Servicios</a>
-                <a href="#"
-                    class="inline-block max-h-20 py-3 px-16 bg-black text-white font-bold border-transparent border-8 text-2xl rounded-3xl hover:border-gray-400 hover:bg-white hover:text-black transition duration-500 md:text-">Equipo
-                    humano</a>
-            </div>
-        </section>
-        <section class="bg-[url(/img/huellasAnimales.jpg)]">
-            <div class="lg:container mx-auto md:flex gap-5 md:w-full p-3">
-                <div
-                    class="left bg-[url(/img/cachorro.gif)] bg-no-repeat bg-contain bg-top w-5/6 md:w-1/2 pt-52 max-auto">
-                    <div class="card text-center bg-white 2xl:w-5/6 mx-auto mt-72 rounded-2xl overflow-hidden xl:w-4/5">
-                        <div class="cover bg-black">
-                            <video src="videos/cebra.mp4" autoplay loop muted></video>
-                        </div>
-                        <div class="content ">
-
-                        </div>
-                    </div>
-                </div>
-                <div class="rigth">
-
-                </div>
-            </div>
-        </section>
+<body class="relative h-screen">
+    <div
+        class="fixed inset-0 bg-[url('./img/patitasAnimales-removebg-preview.png')] bg-cover bg-center opacity-50 -z-10">
     </div>
 
-    <script>
+    <!-- <div id="cursor" class="cursor"></div> -->
 
-        const menuButton = document.querySelector('#mobile-menu')
+    <nav class="bg-gray-200 flex justify-between lg:justify-start items-center drop-shadow-xl ">
+        <div class="logo p-2 w-1/6">
+            <img src="./img/clinicaLogoo.jpg" class="w-20" alt="">
+        </div>
+        <div class="links lg:block hidden w-1/6 md:w-4/6">
+            <ul class="menu flex items-center justify-center gap-5">
+                <li><a href="#servicios"
+                        class="text-black text-xl block p-5 font-bold hover:text-amber-800">Servicios</a></li>
+                <li><a href="#contacto"
+                        class="text-black text-xl block p-5 font-bold hover:text-amber-800">Localízanos</a>
+                </li>
+                <li><a href="#promociones"
+                        class="text-black text-xl block p-5 font-bold hover:text-amber-800">Promociones</a></li>
+                <li><a href="#equipo" class="text-black text-xl block p-5 font-bold hover:text-amber-800">Conócenos</a>
+                </li>
+                </li>
+                <li><a href="#"
+                        class="border-4 border-lime-300 text-black text-xl font-bold p-2 rounded-full hover:bg-lime-300 hover:text-black hover:border-transparent transition duration-500">Contacto</a>
+                </li>
+                </li>
+            </ul>
+        </div>
+        <div class="block overflow-hidden lg:hidden w-2/6 lg:w-4/6 ">
+            <a href="#"
+                class="text-black text-center sm:text-2xl text-lg  block m-1 p-2 border-4 border-amber-800 rounded-full font-bold hover:bg-lime-300 hover:border-transparent transition duration-500"
+                id="mobile-menu">Menú</a>
+            <ul class="mobile-links hidden static w-full absolute z-50 left-0 text-center bg-gray-200">
+                <li><a href="#servicios" class="text-black block p-5 font-bold hover:text-amber-800">Servicios</a></li>
+                <li><a href="#contacto" class="text-black block p-5 font-bold hover:text-amber-800">Localízanos</a></li>
+                <li><a href="#promociones" class="text-black block p-5 font-bold hover:text-amber-800">Promociones</a>
+                </li>
+                <li><a href="#equipo" class="text-black block p-5 font-bold hover:text-amber-800">Quiénes somos</a></li>
+                </li>
+                <li><a href="#"
+                        class="my-4 inline-block border-4 border-amber-800 text-black font-bold p-2 rounded-full hover:bg-lime-300 hover:border-transparent transition duration-500">Contacto</a>
+                </li>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header
+        class="bg-lime-500 text-white text-center py-16 bg-[url(./img/perroCamara.jpg)] bg-no-repeat bg-cover bg-center bg-fixed">
+        <h1
+            class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-yellow-500 to-green-500 drop-shadow-md">
+            Cuidamos a tu mascota como si fuera nuestra</h1>
+        <p
+            class="mt-4 font-semibold text-xl bg-clip-text text-transparent bg-gradient-to-br from-green-500 to-yellow-500 drop-shadow-md ">
+            Atención veterinaria de calidad con amor y profesionalismo.</p>
+        <p class="font-bold bg-clip-text text-transparent bg-gradient-to-br from-green-500 to-gray-900 drop-shadow-md">
+            Te ayudamos a cuidar la salud y el bienestar de tu mascota</p>
+        <a href="#contacto"
+            class="relative inline-block mt-8 w-40 h-10 flex justify-center items-center border-4 border-lime-200 rounded-md group transition-all overflow-hidden cursor-pointer z-1">
+            <span
+                class="w-8 h-8 bg-lime-200 rounded-full absolute -bottom-10 -left-2 group-hover:-bottom-1 transition-all duration-100"></span>
+            <span
+                class="w-8 h-8 bg-lime-300 rounded-full absolute -bottom-10 left-2 group-hover:-bottom-1 transition-all duration-200"></span>
+            <span
+                class="w-8 h-8 bg-lime-200 rounded-full absolute -bottom-10 left-6 group-hover:-bottom-1 transition-all duration-300"></span>
+            <span
+                class="w-8 h-8 bg-lime-300 rounded-full absolute -bottom-10 left-10 group-hover:-bottom-1 transition-all duration-400"></span>
+            <span
+                class="w-8 h-8 bg-lime-200 rounded-full absolute -bottom-10 left-14 group-hover:-bottom-1 transition-all duration-500"></span>
+            <span
+                class="w-8 h-8 bg-lime-300 rounded-full absolute -bottom-10 left-18 group-hover:-bottom-1 transition-all duration-600"></span>
+            <span
+                class="w-8 h-8 bg-lime-200 rounded-full absolute -bottom-10 left-22 group-hover:-bottom-1 transition-all duration-700"></span>
+            <span
+                class="w-8 h-8 bg-lime-300 rounded-full absolute -bottom-10 left-26 group-hover:-bottom-1 transition-all duration-800"></span>
+            <span
+                class="w-8 h-8 bg-lime-200 rounded-full absolute -bottom-10 left-30 group-hover:-bottom-1 transition-all duration-900"></span>
+            <span
+                class="w-8 h-8 bg-lime-300 rounded-full absolute -bottom-10 left-34 group-hover:-bottom-1 transition-all duration-1000"></span>
+            <span
+                class="w-8 h-8 bg-lime-300 rounded-full absolute -bottom-10 left-38 group-hover:-bottom-1 transition-all duration-1100"></span>
 
-        menuButton.addEventListener('click', e => {
-            const menu = document.querySelector('.mobile-links');
+            <span
+                class="italic italic relative text-lime-200 text-lg font-bold hover:text-lime-900 transition duration-500">Reserva
+                una cita</span>
+        </a>
 
-            menu.classList.toggle('hidden');
-        })
+    </header>
 
-    </script>
+    <section class="container mx-auto my-12 px-6" id="servicios">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Nuestros Servicios</h2>
+        <div class="grid grid-cols-4 grid-rows-5 gap-1 mx-auto h-150 overflow-hidden">
+            <div
+                class="group col-span-2 row-span-2 bg-[url(./img/cardiologia.jpg)] bg-no-repeat bg-cover bg-center relative flex items-center justify-center overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-lime-500 opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 transition-all duration-500 ease-out">
+                </div>
+                <h3
+                    class="text-black text-center italic italic relative z-10 text-xl sm:text-2xl md:text-3xl font-bold drop-shadow-md">
+                    Cardiología</h3>
+            </div>
+
+            <div
+                class="group col-span-1 row-span-2 col-start-3 bg-[url(./img/endoscopia.jpg)] bg-no-repeat bg-cover bg-center relative flex items-center justify-center overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-lime-500 opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 transition-all duration-500 ease-out">
+                </div>
+                <h3
+                    class="text-black text-center italic relative z-10 text-xl sm:text-2xl md:text-3xl font-bold drop-shadow-md">
+                    Endoscopia
+                </h3>
+            </div>
+
+            <div
+                class="group col-span-1 row-span-3 col-start-4 bg-[url(./img/exoticos.jpg)] bg-no-repeat bg-cover bg-center relative flex items-center justify-center overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-lime-500 opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 transition-all duration-500 ease-out">
+                </div>
+                <h3
+                    class="text-black text-center italic relative z-10 text-xl sm:text-2xl md:text-3xl font-bold drop-shadow-md">
+                    Animales
+                    exóticos</h3>
+            </div>
+
+            <div
+                class="group ol-span-1 row-span-2 row-start-4 col-start-4 bg-[url(./img/24h.jpg)] bg-no-repeat bg-cover bg-center relative flex items-center justify-center overflow-hidden p-4">
+                <div
+                    class="absolute inset-0 bg-lime-500 opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 transition-all duration-500 ease-out">
+                </div>
+                <h3
+                    class="text-xl sm:text-2xl md:text-3xl text-black text-center italic relative z-10 font-bold drop-shadow-md">
+                    Urgencias 24h
+                </h3>
+            </div>
+
+
+            <div
+                class="group col-span-1 row-span-3 col-start-3 row-start-3 bg-[url(./img/trauma.jpg)] bg-no-repeat bg-cover bg-center relative flex items-center justify-center overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-lime-500 opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 transition-all duration-500 ease-out">
+                </div>
+                <h3
+                    class="text-black text-center italic relative z-10 text-xl sm:text-2xl md:text-3xl font-bold drop-shadow-md">
+                    Traumatología
+                </h3>
+            </div>
+
+            <div
+                class="group col-span-1 row-span-2 col-start-1 row-start-3 bg-[url(./img/m_interna.jpg)] bg-no-repeat bg-cover bg-center relative flex items-center justify-center overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-lime-500 opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 transition-all duration-500 ease-out">
+                </div>
+                <h3
+                    class="text-black text-center italic relative z-10 text-xl sm:text-2xl md:text-3xl font-bold drop-shadow-md">
+                    Medicina
+                    interna</h3>
+            </div>
+
+            <div
+                class="group col-span-1 row-span-2 col-start-2 row-start-3 bg-[url(./img/fisio.jpg)] bg-no-repeat bg-cover bg-center relative flex items-center justify-center overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-lime-500 opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 transition-all duration-500 ease-out">
+                </div>
+                <h3
+                    class="text-black text-center italic relative z-10 text-xl sm:text-2xl md:text-3xl font-bold drop-shadow-md">
+                    Rehabilitación
+                    y fisioterapia</h3>
+            </div>
+
+            <div
+                class="group col-span-2 row-span-1 row-start-5 col-start-1 bg-[url(./img/cirugia.jpg)] bg-no-repeat bg-cover bg-center relative flex items-center justify-center overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-lime-500 opacity-0 group-hover:opacity-60 scale-0 group-hover:scale-100 transition-all duration-500 ease-out">
+                </div>
+                <h3
+                    class="text-black text-center italic relative z-10 text-xl sm:text-2xl md:text-3xl font-bold drop-shadow-md">
+                    Cirugía
+                    avanzada</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative w-4/5 mx-auto overflow-hidden my-8" id="promociones">
+        <div id="carousel" class="relative w-full overflow-hidden">
+            <div class="relative flex transition-transform duration-700 ease-in-out" id="carousel-inner">
+
+                <div class="carousel-item w-full flex-shrink-0 min-h-[600px] bg-black/70 flex flex-col items-center justify-start p-8"
+                    data-index="0">
+                    <h2 class="text-4xl text-lime-500 font-bold mb-2">CACHORROS</h2>
+                    <p class="text-xl text-lime-500 mb-8">PROTÉGELE Y EMPIEZA CON BUENA PATA</p>
+
+                    <div class="flex justify-center gap-8 px-4 w-full max-w-6xl mx-auto">
+                        <div class="w-1/2 bg-blue-50 p-6 rounded-lg">
+                            <h3 class="text-2xl font-bold mb-6 text-lime-500">BÁSICO</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <span class="text-lime-500">🔷</span>
+                                    <span>MICROCHIP</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-lime-500">📘</span>
+                                    <span>CARTILLA O PASAPORTE</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-lime-500">💉</span>
+                                    <span>VACUNACIÓN COMPLETA</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-lime-500">🏷️</span>
+                                    <span>10% DTO. EN ACCESORIOS, ALIMENTACIÓN Y DESPARASITACIÓN</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-1/2 bg-lime-600 p-6 rounded-lg text-white">
+                            <h3 class="text-2xl font-bold mb-6">PREMIUM</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center font-bold gap-3">
+                                    <span class="text-green-400">✓</span>
+                                    <span>TODO EL PLAN BÁSICO</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">✓</span>
+                                    <span>4 CONSULTAS AL AÑO</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">✓</span>
+                                    <span>TEST COPROLÓGICO</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">✓</span>
+                                    <span class="font-bold">10% DTO.</span><span>EN ESTERILIZACIÓN</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">✓</span>
+                                    <span>CHEQUEO GENERAL, CON REVISIÓN DENTAL Y ARTICULACIONES</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="text-center font-semibold mt-6 text-sm text-lime-500">
+                        SÓLO HASTA EL 28/02/25
+                    </div>
+                </div>
+
+                <div class="carousel-item w-full flex-shrink-0 min-h-[600px] bg-black/70 flex flex-col items-center justify-start p-8"
+                    data-index="0">
+                    <h2 class="text-4xl text-green-600 font-bold mb-2">GATITOS</h2>
+                    <p class="text-xl text-green-600 mb-8">PROTÉGELE Y COMIENZA CON LA MEJOR COMPAÑÍA</p>
+
+                    <div class="flex justify-center gap-8 px-4 w-full max-w-6xl mx-auto">
+                        <div class="w-1/2 bg-green-50 p-6 rounded-lg">
+                            <h3 class="text-2xl font-bold mb-6 text-green-600">BÁSICO</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-600">🔷</span>
+                                    <span>MICROCHIP</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-600">📘</span>
+                                    <span>CARTILLA O PASAPORTE</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-600">💉</span>
+                                    <span>VACUNACIÓN COMPLETA</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-600">🏷️</span>
+                                    <span>10% DTO. EN ACCESORIOS, ALIMENTACIÓN Y DESPARASITACIÓN</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="w-1/2 bg-green-900 p-6 rounded-lg text-white">
+                            <h3 class="text-2xl font-bold mb-6">PREMIUM</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center font-bold gap-3">
+                                    <span class="text-green-400 ">✓</span>
+                                    <span>TODO EL PLAN BÁSICO</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">✓</span>
+                                    <span>4 CONSULTAS AL AÑO</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">✓</span>
+                                    <span>TEST DE PARÁSITOS INTERNOS Y EXTERNOS</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">✓</span>
+                                    <span class="font-bold">10% DTO.</span><span> EN ESTERILIZACIÓN</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-green-400">✓</span>
+                                    <span>CHEQUEO GENERAL, CON REVISIÓN DENTAL Y ARTICULACIONES</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-6 font-semibold text-sm text-green-600">
+                        SÓLO HASTA EL 28/02/25
+                    </div>
+                </div>
+
+                <div class="carousel-item w-full flex-shrink-0 min-h-[600px] bg-black/70 flex flex-col items-center justify-center p-8"
+                    data-index="0">
+                    <h2 class="text-4xl text-lime-500 font-bold mb-2">SENIOR</h2>
+                    <p class="text-xl text-lime-500 mb-8">CUIDAMOS DE NUESTROS MAYORES</p>
+
+                    <div class="flex justify-center gap-8 px-4 w-full max-w-6xl mx-auto">
+                        <div class="w-2/3 bg-lime-100 p-6 rounded-lg">
+                            <h3 class="text-2xl font-bold mb-6 text-lime-500">PACK SENIOR</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <span class="text-lime-500">🔍</span>
+                                    <span>CHEQUEO GENERAL</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-lime-500">✝</span>
+                                    <span>PERFIL GERIÁTRICO 360º</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-lime-500">🔬</span>
+                                    <span>ANALISIS DE ORINA</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-lime-500">📸</span>
+                                    <span>ECOGRAFÍA Y RADIOGRAFÍA</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="text-lime-500">🏷️</span>
+                                    <span class="font-bold">10% DTO.</span><span>ACCESORIOS, ALIMENTACIÓN Y
+                                        DESPARASITACIÓN</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="text-center font-semibold mt-6 text-sm text-lime-600">
+                        SÓLO HASTA EL 28/02/25
+                    </div>
+                </div>
+            </div>
+
+            <button id="prevBtn"
+                class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-white/30 text-black p-2 rounded-full hover:bg-white/50">❮</button>
+            <button id="nextBtn"
+                class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-white/30 text-black p-2 rounded-full hover:bg-white/50">❯</button>
+
+            <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3">
+                <button class="w-3 h-3 rounded-full bg-gray-400" data-slide="0"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-400" data-slide="0"></button>
+                <button class="w-3 h-3 rounded-full bg-gray-400" data-slide="0"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="relative w-8/10 mx-auto overflow-hidden my-30">
+        <div id="carousel" class="relative w-full overflow-hidden">
+            <div class="relative flex transition-transform duration-700 ease-in-out" id="carousel-inner">
+                <div class="carousel-item w-full flex-shrink-0 h-100 lg:h-150 bg-[url('./img/c1.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+                    data-index="0">
+                    <h2 class="text-3xl text-black sm:text-4xl md:text-5xl font-bold md:pb-40 pr-10 pl-10 lg:pr-90">
+                        Completa tu experiencia de usuario
+                    </h2>
+                </div>
+                <div class="carousel-item w-full flex-shrink-0 h-100 lg:h-150 bg-[url('./img/c1.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+                    data-index="0">
+                    <h2 class="text-3xl text-black sm:text-4xl md:text-5xl font-bold md:pb-40 pr-10 pl-10 lg:pr-90">
+                        Completa
+                    </h2>
+                </div>
+                <div class="carousel-item w-full flex-shrink-0 h-100 lg:h-150 bg-[url('./img/c1.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+                    data-index="0">
+                    <h2 class="text-3xl text-black sm:text-4xl md:text-5xl font-bold md:pb-40 pr-10 pl-10 lg:pr-90">
+                        Usuario
+                    </h2>
+                </div>
+            </div>
+            <button id="prevBtn"
+                class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full">❮</button>
+            <button id="nextBtn"
+                class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full">❯</button>
+
+            <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3">
+                <button class="indicador w-3 h-3 rounded-full bg-gray-400" data-slide="0"></button>
+            </div>
+        </div>
+    </section> -->
+
+
+    <!-- <section class=" w-full px-6 bg-lime-500 text-white py-12 relative" id="nosotros">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold">Sobre Nosotros</h2>
+            <p class="mt-4 text-lg">Somos un equipo de veterinarios apasionados por el bienestar animal.</p>
+        </div>
+        <div class="relative">
+            <div id="carousel" class="flex overflow-x-auto snap-x space-x-4 p-4 w-full scrollbar-hide scroll-smooth"
+                style="scrollbar-width: none;">
+                <button id="prev"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md">
+                    &#10094;
+                </button>
+
+                <button id="next"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full shadow-md">
+                    &#10095;
+                </button>
+                <div class="flex overflow-x-auto snap-x space-x-4 p-4 scrollbar-hide scroll-smooth"
+                    style="scrollbar-width: none;">
+                    <div class="min-w-[250px] bg-white rounded-xl shadow-lg p-4 snap-center">
+                        <img src="../img/juanito.jpg" alt="Veterinario" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-lg text-gray-900 font-semibold mt-3">Dr. Juan Ruiz</h3>
+                        <p class="text-gray-600 text-sm">Veterinario especialista</p>
+                    </div>
+                    <div class="min-w-[250px] bg-white rounded-xl shadow-lg p-4 snap-center">
+                        <img src="../img/juanito.jpg" alt="Veterinario" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-lg text-gray-900 font-semibold mt-3">Dr. Manolito Ruiz</h3>
+                        <p class="text-gray-600 text-sm">Cirujano veterinari</p>
+                    </div>
+                    <div class="min-w-[250px] bg-white rounded-xl shadow-lg p-4 snap-center">
+                        <img src="../img/juanito.jpg" alt="Veterinario" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-lg text-gray-900 font-semibold mt-3">Dr. Oche Ruiz</h3>
+                        <p class="text-gray-600 text-sm">Asistente veterinario</p>
+                    </div>
+                    <div class="min-w-[250px] bg-white rounded-xl shadow-lg p-4 snap-center">
+                        <img src="../img/juanito.jpg" alt="Veterinario" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-lg text-gray-900 font-semibold mt-3">Dr. Oche Ruiz</h3>
+                        <p class="text-gray-600 text-sm">Asistente veterinario</p>
+                    </div>
+                    <div class="min-w-[250px] bg-white rounded-xl shadow-lg p-4 snap-center">
+                        <img src="../img/fisio.jpg" alt="Veterinario" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-lg text-gray-900 font-semibold mt-3">Dr. Oche Ruiz</h3>
+                        <p class="text-gray-600 text-sm">Asistente veterinario</p>
+                    </div>
+                    <div class="min-w-[250px] bg-white rounded-xl shadow-lg p-4 snap-center">
+                        <img src="../img/juanito.jpg" alt="Veterinario" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-lg text-gray-900 font-semibold mt-3">Dr. Oche Ruiz</h3>
+                        <p class="text-gray-600 text-sm">Asistente veterinario</p>
+                    </div>
+                    <div class="min-w-[250px] bg-white rounded-xl shadow-lg p-4 snap-center">
+                        <img src="../img/juanito.jpg" alt="Veterinario" class="w-full h-40 object-cover rounded-md">
+                        <h3 class="text-lg text-gray-900 font-semibold mt-3">Dr. Oche Ruiz</h3>
+                        <p class="text-gray-600 text-sm">Asistente veterinario</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="container mx-auto p-6 text-center" id="equipo">
+        <div class="relative w-full max-w-4xl mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.7),0_5px_15px_rgba(0,0,0,0.5)] rounded-lg">
+            <div class="relative bg-lime-100 rounded-lg p-20">
+                <h2 class="text-2xl font-bold text-gray-800 mb-20">Nuestro Equipo de Veterinarios</h2>
+                <div class="flex justify-between mb-4">
+                    <div class="w-1/4 rounded-lg overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.7),0_5px_15px_rgba(0,0,0,0.5)]">
+                        <span class="text-gray-700">Dr. Oche Ruiz</span>
+                        <img src="../img/oche.jpg" alt="" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="w-1/4 rounded-lg overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.7),0_5px_15px_rgba(0,0,0,0.5)]">
+                        <span class="text-gray-700">Dr. Manolito Ruiz</span>
+                        <img src="../img/manolito.jpg" alt="" class="w-full h-full object-cover" />
+                    </div>
+                    <div class="w-1/4 rounded-lg overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.7),0_5px_15px_rgba(0,0,0,0.5)]">
+                        <span class="text-gray-700">Dr. Juan Ruiz</span>
+                        <img src="../img/juanito.jpg" alt="" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+                <div class="pt-15 pb-4 text-center">
+                    <a href="#contacto"
+                        class="inline-block bg-lime-500 hover:bg-lime-600 text-white font-bold py-2 px-4 rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.7),0_5px_15px_rgba(0,0,0,0.5)]">Contactanos</a>    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="container mx-auto my-12 p-6 text-center bg-lime-500/50">
+        <h2 class="text-4xl font-bold text-gray-800 mb-6">Contáctanos</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 place-items-center gap-8">
+            <div class="text-gray-700 ">
+                <p class="text-lg flex items-center gap-2">
+                    📍 <span>Ubicación: <a href="https://goo.gl/maps/ejemplo" target="_blank"
+                            class="text-blue-600 hover:underline">Calle Doctor Oloriz 123, Granada</a></span>
+                </p>
+                <p class="text-lg flex items-center gap-2 mt-2">
+                    📞 <span>Teléfono: <a href="tel:+34615895895" class="text-blue-600 hover:underline">+34 615 895
+                            895</a></span>
+                </p>
+                <p class="text-lg flex items-center gap-2 mt-2">
+                    ✉️ <span>Email: <a href="mailto:contacto@ejemplo.com"
+                            class="text-blue-600 hover:underline">contacto@ejemplo.com</a></span>
+                </p>
+            </div>
+
+            <div class="relative w-full h-64 rounded-lg overflow-hidden shadow-md">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12769.182618920907!2d-3.7037902!3d37.1747248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f84bfe991f35%3A0x3018baddf1f1b67d!2sCalle%20Dr.%20Oloriz%2C%20123%2C%2029015%20Granada!5e0!3m2!1ses!2ses!4v1676147874830!5m2!1ses!2ses"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="w-1/2 mx-auto mt-6 md:mt-0 space-y-4">
+                <a href="https://wa.me/34615895895"
+                    class="flex items-center gap-2 bg-green-500 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-green-600 transition">
+                    <span>💬 WhatsApp</span>
+                </a>
+                <a href="https://wa.me/34615895895"
+                    class="flex items-center gap-2 bg-green-500 text-white font-bold py-3 px-6 rounded-lg bg-gradient-to-br from-purple-300 to-pink-500 shadow-md hover:bg-gradient-to-br hover:from-purple-700 hover:to-pink-600 transition">
+                    <span>📸 Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/tu_usuario"
+                    class="flex items-center gap-2 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-blue-700 transition">
+                    <span>📘 Facebook</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bg-lime-500 text-white py-4">
+            <div class="container mx-auto text-center">
+                <p>&copy; 2023 Veterinaria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+    <script src="../js/carousel.js"></script>
+
 </body>
 
 </html>

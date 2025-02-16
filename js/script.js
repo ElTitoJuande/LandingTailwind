@@ -44,25 +44,3 @@ document.addEventListener("DOMContentLoaded", () => {
         observer.observe(element);
     });
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.getElementById("carousel");
-    const prevBtn = document.getElementById("prev");
-    const nextBtn = document.getElementById("next");
-  
-    if (carousel && prevBtn && nextBtn) {
-      console.log("Elementos encontrados");
-  
-      prevBtn.addEventListener("click", function () {
-        console.log("Pulsado botón prev");
-        carousel.scrollBy({ left: -300, behavior: "smooth" });
-      });
-  
-      nextBtn.addEventListener("click", function () {
-        console.log("Pulsado botón next");
-        carousel.scrollBy({ left: 300, behavior: "smooth" });
-      });
-    } else {
-      console.log("No se encontraron los elementos");
-    }
-  });

@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <style>
+    .slide-in {
+      transform: translateX(-100%);
+      animation: slideIn 2s forwards;
+    }
+
+    .slide-out {
+      animation: slideOut 2s forwards;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-100%);
+      }
+
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideOut {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="p-7 flex justify-around items-center border-b border-gray-700">
+    <h1 class="text-lg font-bold text-2xl tracking-wide">SAMSUNG</h1>
+    <nav class="md:mt-0 mt-20">
+      <ul id="menu" class="flex space-x-4 hidden lg:flex list-none">
+        <li><a href="#" class="hover:underline">Inicio</a></li>
+        <li><a href="#" class="hover:underline">Productos</a></li>
+        <li><a href="#" class="hover:underline">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="lg:hidden  ml-10">
+      <button id="menu-toggle" class="text-black">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+  <main class="bg-black text-white">
+    <section
+      class="relative text-left h-250 xl:h-260 py-25  xl:py-25 md:py-8 sm:py-8 bg-[url('./img/galaxy-s23-ultra-highlights-kv.avif')] md:bg-cover bg-center bg-no-repeat">
+      <div class="px-10 xl:px-100 md:px-20 ">
+        <h2 class="text-5xl font-bold my-4 text-white">Galaxy S23 Ultra</h2>
+        <p class="text-2xl my-2 text-gray-500">Galaxy AI está aquí</p>
+        <button id="openModal2"
+          class="relative px-6 py-3 my-4 text-white font-bold bg-transparent overflow-hidden rounded-lg transition-colors duration-500 border border-gray-700 after:absolute after:inset-0 after:bg-white after:opacity-0 after:origin-left after:scale-x-0 after:transition-all after:duration-500 hover:text-black hover:after:scale-x-100 hover:after:opacity-100 z-10 after:-z-10">
+          VER MAS
+        </button>
+        <div id="modal2"
+          class="fixed inset-0 bg-black text-black flex justify-center items-center opacity-0 invisible transition-opacity duration-500  z-99">
+          <div class="w-full h-full flex flex-col items-center justify-center bg-white slide-in text-center">
+            <h1 class="text-5xl font-bold">Samsung Galaxy</h1>
+            <p class="mt-4 text-lg">Descubre la nueva generación de móviles Samsung.</p>
+            <div class="flex my-15">
+              <div class="flex flex-col items-center justify-center  mx-13">
+                <h2 class="border-b-2 text-2xl font-bold mb-5 px-5">Galaxy S23 Ultra</h2>
+                <img id="phone-image2" src="./img/ultra-black.avif" alt="">
+                <div>
+                  <h2 class="mt-10 font-bold text-xl">Elige un color</h2>
+                  <div class="flex justify-center gap-4 mt-4">
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color2" value="black2" class="hidden peer" checked>
+                      <span
+                        class="block w-10 h-10 bg-black rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color2" value="crema2" class="hidden peer">
+                      <span
+                        class="block w-10 h-10 bg-[#f0eae0] rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color2" value="lavender2" class="hidden peer">
+                      <span
+                        class="block w-10 h-10 bg-purple-300 rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color2" value="green2" class="hidden peer">
+                      <span
+                        class="block w-10 h-10 bg-[#5f645a] rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col items-center justify-center hidden md:block mx-13">
+                <h2 class="border-b-2 text-2xl font-bold mb-5 px-10">Galaxy S23 +</h2>
+                <img id="phone-image3" src="./img/plus-black.avif" alt="">
+                <div>
+                  <h2 class="mt-10 font-bold text-xl">Elige un color</h2>
+                  <div class="flex justify-center gap-4 mt-4">
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color3" value="black3" class="hidden peer" checked>
+                      <span
+                        class="block w-10 h-10 bg-black rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color3" value="crema3" class="hidden peer">
+                      <span
+                        class="block w-10 h-10 bg-[#f0eae0] rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color3" value="lavender3" class="hidden peer">
+                      <span
+                        class="block w-10 h-10 bg-purple-300 rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color3" value="green3" class="hidden peer">
+                      <span
+                        class="block w-10 h-10 bg-[#5f645a] rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="flex flex-col items-center justify-center hidden lg:block lg: mx-13">
+                <h2 class="border-b-2 text-2xl font-bold mb-5 px-10">Galaxy S23 </h2>
+                <img id="phone-image4" src="./img/s-black.avif" alt="">
+                <div>
+                  <h2 class="mt-10 font-bold text-xl">Elige un color</h2>
+                  <div class="flex justify-center gap-4 mt-4">
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color4" value="black4" class="hidden peer" checked>
+                      <span
+                        class="block w-10 h-10 bg-black rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color4" value="crema4" class="hidden peer">
+                      <span
+                        class="block w-10 h-10 bg-[#f0eae0] rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color4" value="lavender4" class="hidden peer">
+                      <span
+                        class="block w-10 h-10 bg-purple-300 rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                    <label class="cursor-pointer">
+                      <input type="radio" name="color4" value="green4" class="hidden peer">
+                      <span
+                        class="block w-10 h-10 bg-[#5f645a] rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button id="closeModal2"
+              class="relative px-6 py-3 my-4 text-black font-bold bg-transparent overflow-hidden rounded-lg transition-colors duration-500 border border-gray-700 after:absolute after:inset-0 after:bg-black after:opacity-0 after:origin-left after:scale-x-0 after:transition-all after:duration-500 hover:text-white hover:after:scale-x-100 hover:after:opacity-100 z-10 after:-z-10">Cerrar</button>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-110 py-10">
+        <h2 class="text-3xl font-bold">Galaxy AI ✦ está aquí</h2>
+        <p class="mt-4 max-w-2xl mx-auto">Descubre la nueva era de la IA móvil con Galaxy AI. Potenciado por el
+          rendimiento avanzado del Galaxy S23 Ultra, lleva tu experiencia a otro nivel.</p>
+        <!-- Botón para mostrar el modal -->
+        <button id="openModal"
+          class="relative px-6 py-3 text-white font-bold bg-transparent overflow-hidden rounded-lg transition-colors duration-500 border border-gray-700 after:absolute after:inset-0 after:bg-white after:opacity-0 after:origin-left after:scale-x-0 after:transition-all after:duration-500 hover:text-black hover:after:scale-x-100 hover:after:opacity-100 z-10 after:-z-10">Ver
+          Características</button>
+        <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-99">
+          <div class="bg-white p-6 rounded-lg shadow-lg w-120 text-black">
+            <h2 class="text-xl font-bold mb-4">Características del Móvil</h2>
+            <ul class="list-disc pl-5 space-y-2 list-none">
+              <li><strong>Pantalla:</strong> 6.5" OLED Full HD+</li>
+              <li><strong>Procesador:</strong> Snapdragon 8 Gen 2</li>
+              <li><strong>RAM:</strong> 12GB</li>
+              <li><strong>Almacenamiento:</strong> 256GB</li>
+              <li><strong>Cámara:</strong> 50MP + 12MP + 10MP</li>
+              <li><strong>Batería:</strong> 5000mAh con carga rápida</li>
+              <li><strong>Sistema Operativo:</strong> Android 14</li>
+            </ul>
+            <button id="closeModal"
+              class="relative px-6 py-3 text-black font-bold bg-transparent overflow-hidden rounded-lg transition-colors duration-500 border border-gray-700 after:absolute after:inset-0 after:bg-black after:opacity-0 after:origin-left after:scale-x-0 after:transition-all after:duration-500 hover:text-white hover:after:scale-x-100 hover:after:opacity-100 z-10 after:-z-10">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="flex flex-wrap items-center text-center">
+      <div class="lg:w-1/2 lg:pl-20 lg:border-r-4 border-r-0 border-white my-20 mx-auto">
+        <h2 class="text-6xl font-bold">Descubre todas sus Formas</h2>
+        <p>Selecciona un color:</p>
+        <div class="flex justify-center gap-4 mt-4">
+          <label class="cursor-pointer">
+            <input type="radio" name="color" value="black" class="hidden peer" checked>
+            <span
+              class="block w-10 h-10 bg-black rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+          </label>
+          <label class="cursor-pointer">
+            <input type="radio" name="color" value="crema" class="hidden peer">
+            <span
+              class="block w-10 h-10 bg-[#f0eae0] rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+          </label>
+          <label class="cursor-pointer">
+            <input type="radio" name="color" value="lavender" class="hidden peer">
+            <span
+              class="block w-10 h-10 bg-purple-300 rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+          </label>
+          <label class="cursor-pointer">
+            <input type="radio" name="color" value="green" class="hidden peer">
+            <span
+              class="block w-10 h-10 bg-[#5f645a] rounded-full border-2 border-white peer-checked:ring-4 peer-checked:ring-gray-400"></span>
+          </label>
+        </div>
+      </div>
+      <div class="lg:w-1/2 lg:pl-20 mx-auto lg:my-20 my-10 flex justify-center">
+        <img id="phone-image" src="./img/black.avif" alt="" class="w-100 h-auto rounded-lg">
+      </div>
+    </section>
+    <section class="lg:flex lg:pl-20 lg:pr-20 mt-10 ml-10 mr-10">
+      <div class="mx-auto max-w-lg overflow-hidden rounded-xl bg-white shadow-lg lg:max-w-2xl lg:mr-5 mb-20">
+        <div class="flex flex-wrap lg:flex-nowrap text-center justify-center">
+          <div class="md:shrink-0">
+            <img class="h-48 w-full object-cover lg:h-full lg:w-48" src="./img/card1.webp" alt="" />
+          </div>
+          <div class="p-8">
+            <div class="text-sm font-semibold tracking-wide text-indigo-500 uppercase">Company retreats</div>
+            <a href="#" class="mt-1 block text-lg leading-tight font-medium text-black hover:underline">Incredible
+              accommodation for your team</a>
+            <p class="mt-2 text-gray-500">
+              Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a
+              list of
+              places to do just that.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-lg overflow-hidden rounded-xl bg-white shadow-lg lg:max-w-2xl lg:mr-5 mb-20">
+        <div class="flex flex-wrap lg:flex-nowrap text-center justify-center">
+          <div class="md:shrink-0">
+            <img class="h-48 w-full object-cover lg:h-full lg:w-48" src="./img/card2.avif" alt="" />
+          </div>
+          <div class="p-8">
+            <div class="text-sm font-semibold tracking-wide text-indigo-500 uppercase">Company retreats</div>
+            <a href="#" class="mt-1 block text-lg leading-tight font-medium text-black hover:underline">Incredible
+              accommodation for your team</a>
+            <p class="mt-2 text-gray-500">
+              Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a
+              list of
+              places to do just that.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mx-auto max-w-lg overflow-hidden rounded-xl bg-white shadow-lg lg:max-w-2xl lg:mr-5 mb-20">
+        <div class="flex flex-wrap lg:flex-nowrap text-center justify-center">
+          <div class="md:shrink-0">
+            <img class="h-48 w-full object-cover lg:h-full lg:w-48 " src="./img/card3.webp" alt="" />
+          </div>
+          <div class="p-8">
+            <div class="text-sm font-semibold tracking-wide text-indigo-500 uppercase">Company retreats</div>
+            <a href="#" class="mt-1 block text-lg leading-tight font-medium text-black hover:underline">Incredible
+              accommodation for your team</a>
+            <p class="mt-2 text-gray-500">
+              Looking to take your team away on a retreat to enjoy awesome food and take in some sunshine? We have a
+              list of
+              places to do just that.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="py-24 sm:py-32">
+        <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+          <h2 class="text-center text-base/7 font-semibold text-white">Deploy faster</h2>
+          <p
+            class="mx-auto mt-2 max-w-lg text-center text-4xl font-semibold tracking-tight text-balance text-white sm:text-5xl">
+            Everything you need to deploy your potencial</p>
+          <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+            <div class="relative lg:row-span-2">
+              <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
+              <div
+                class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Mobile friendly
+                  </p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Es de los dispositivos mas
+                    ecologicos en el mercado actual con un 50% de reduccion de CO2.</p>
+                </div>
+                <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
+                  <div
+                    class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                    <img class="size-full object-cover object-top"
+                      src="./img/galaxy-s23-ultra-highlights-high-resolution.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div
+                class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 lg:rounded-l-[2rem]">
+              </div>
+            </div>
+            <div class="relative max-lg:row-start-1">
+              <div class="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]"></div>
+              <div
+                class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+                <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Performance</p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Disfruta de las mejores tecnicas
+                    de nuestros productos punteros</p>
+                </div>
+                <div class="flex flex-1 items-center justify-center px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2">
+                  <img class="w-full max-lg:max-w-xs"
+                    src="https://tailwindui.com/plus-assets/img/component-images/bento-03-performance.png" alt="">
+                </div>
+              </div>
+              <div
+                class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 max-lg:rounded-t-[2rem]">
+              </div>
+            </div>
+            <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+              <div class="absolute inset-px rounded-lg bg-white"></div>
+              <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+                <div class="px-8 pt-8 sm:px-10 sm:pt-10">
+                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Security</p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Tus datos ahora seran protegidos
+                    por un sistema activo de defensa.</p>
+                </div>
+                <!-- Sacado de la documentacion de tailwind -->
+                <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2">
+                  <img class="h-[min(152px,40cqw)] object-cover"
+                    src="https://tailwindui.com/plus-assets/img/component-images/bento-03-security.png" alt="">
+                </div>
+              </div>
+              <div class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5"></div>
+            </div>
+            <div class="relative lg:row-span-2">
+              <div class="absolute inset-px rounded-lg bg-white lg:rounded-r-[2rem]"></div>
+              <div
+                class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-r-[calc(2rem+1px)]">
+                <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                  <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Mobile friendly
+                  </p>
+                  <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Disfruta la posivilidad de
+                    capturar todos los momentos de tu vida con una gran calidad.</p>
+                </div>
+                <div class="@container relative min-h-[30rem] w-full grow max-lg:mx-auto max-lg:max-w-sm">
+                  <div
+                    class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                    <img class="size-full object-cover object-top" src="./img/cara.avif" alt="">
+                  </div>
+                </div>
+              </div>
+              <div
+                class="pointer-events-none absolute inset-px rounded-lg ring-1 shadow-sm ring-black/5 lg:rounded-l-[2rem]">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="border-t-4">
+      <div class="relative w-full md:h-200 h-150 overflow-hidden">
+        <video class="absolute top-0 left-0 w-full h-full object-cover" autoplay loop muted playsinline>
+          <source src="./img/galaxy-s23-ultra-highlights-nightgraphy-astro.webm" type="video/mp4">
+        </video>
+        <div class="absolute top-0 left-0 w-full h-full bg-black/50"></div>
+        <div
+          class="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white text-7xl font-bold ml-5 md:ml-10">
+          Más innovación, menos huella
+        </div>
+      </div>
+    </section>
+    <section class="relative w-full overflow-hidden my-30">
+      <div id="carousel" class="relative w-full overflow-hidden">
+        <div class="relative flex transition-transform duration-700 ease-in-out" id="carousel-inner">
+          <div
+            class="carousel-item w-full flex-shrink-0 h-100 lg:h-150 bg-[url('./img/c1.webp')] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+            data-index="0">
+            <h2 class="text-3xl text-black sm:text-4xl md:text-5xl  font-bold  md:pb-40 pr-10 pl-10 lg:pr-90">Completa
+              tu experiencia de usuario</h2>
+          </div>
+          <div
+            class="carousel-item w-full flex-shrink-0 h-100 lg:h-150 bg-[url('./img/c2.jpg')] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+            data-index="1">
+            <h2 class="text-3xl text-white sm:text-4xl md:text-5xl  font-bold  md:pb-40 pr-10 pl-10 lg:pr-90">Pásate al
+              lado más verde del mundo</h2>
+          </div>
+          <div
+            class="carousel-item w-full flex-shrink-0 h-100 lg:h-150 bg-[url('./img/c3.jpg')] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+            data-index="2">
+            <h2 class="text-3xl text-white sm:text-4xl md:text-5xl  font-bold  md:pb-40 pr-10 pl-10 lg:pr-90">Tenemos
+              algo para cada uno de vosotros</h2>
+          </div>
+          <div
+            class="carousel-item w-full flex-shrink-0 h-100 lg:h-150 bg-[url('./img/c4.avif')] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+            data-index="3">
+            <h2 class="text-3xl text-white sm:text-4xl md:text-5xl  font-bold  md:pb-40 pr-10 pl-10 lg:pr-90">Pásate al
+              lado más verde, ¡sin papel!</h2>
+          </div>
+          <div
+            class="carousel-item w-full flex-shrink-0 h-100 lg:h-150 bg-[url('./img/c5.jpg')] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+            data-index="4">
+            <h2 class="text-3xl text-white sm:text-4xl md:text-5xl  font-bold  md:pb-40 pr-10 pl-10 lg:pr-90">Una nueva
+              funda más ecológica</h2>
+          </div>
+        </div>
+        <div class="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-3">
+          <button class="indicador w-3 h-3 rounded-full bg-gray-400" data-slide="0"></button>
+          <button class="indicador w-3 h-3 rounded-full bg-gray-400" data-slide="1"></button>
+          <button class="indicador w-3 h-3 rounded-full bg-gray-400" data-slide="2"></button>
+          <button class="indicador w-3 h-3 rounded-full bg-gray-400" data-slide="3"></button>
+          <button class="indicador w-3 h-3 rounded-full bg-gray-400" data-slide="4"></button>
+        </div>
+        <button id="prevBtn"
+          class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full">❮</button>
+        <button id="nextBtn"
+          class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black/30 text-white p-2 rounded-full">❯</button>
+      </div>
+    </section>
+    <section class="grid grid-rows-10 gap-6 p-6">
+      <div class="grid md:grid-cols-2 items-center xl:mx-30">
+        <div class="p-4 text-center">
+          <img src="./img/foto5.avif" class="w-100 h-100 rounded-lg mx-auto">
+        </div>
+        <div class="p-4 text-lg border-l-4">
+          <h2 class="font-bold text-5xl mx-10 mb-10">La firma de Galaxy Note, ahora en Galaxy S23 Ultra</h2>
+          <p class="text-justify mx-10">S Pen mantiene vivo el legado de Note. Además, te ayuda a dejar de depender de
+            los cuadernos. Toma notas o haz bocetos más creativos sin esfuerzo y de forma ecológica.</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 items-center xl:mx-30">
+        <div class="p-4 text-lg border-r-4">
+          <h2 class="font-bold text-5xl mx-10 mb-10">Directos de la naturaleza</h2>
+          <p class="text-justify mx-10">El uso de materiales respetuosos con el medio ambiente hace que este sea nuestro
+            smartphone más ecológico.5,6 El cristal reciclado y la película PET acentúan el exterior del smartphone, y
+            la caja hecha de papel reciclado hace que sea respetuoso con el planeta desde el momento en que llega a tus
+            manos.10</p>
+        </div>
+        <div class="p-4 text-center">
+          <img src="./img/foto2.avif" class="w-100 h-100 rounded-lg mx-auto">
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 items-center xl:mx-30">
+        <div class="p-4 text-center">
+          <img src="./img/foto3.avif" class="w-100 h-100 rounded-lg mx-auto">
+        </div>
+        <div class="p-4 text-lg border-l-4">
+          <h2 class="font-bold text-5xl mx-10 mb-10">Diseñado pensando en nuestro planeta</h2>
+          <p class="text-justify mx-10">El uso de materiales respetuosos con el medio ambiente hace que este sea nuestro
+            smartphone más ecológico.5,6 El cristal reciclado y la película PET acentúan el exterior del smartphone, y
+            la caja hecha de papel reciclado hace que sea respetuoso con el planeta desde el momento en que llega a tus
+            manos.10</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 items-center xl:mx-30">
+        <div class="p-4 text-lg border-r-4">
+          <h2 class="font-bold text-5xl mx-10 mb-10">Resistente</h2>
+          <p class="text-justify mx-10">Conoce un diseño resistente creado pensando en la durabilidad. El Galaxy S23
+            Ultra es resistente gracias al cristal Corning® Gorilla® Glass Victus® 2 en la parte Delantera y Trasera,
+            todo ello finalizado con un marco de Armor Aluminium más duradero jamás utilizado en un smartphone Samsung
+            Galaxy. Y una clasificación IP68 significa que puedes seguir usando tu teléfono gracias a su resistencia al
+            polvo y al agua.</p>
+        </div>
+        <div class="p-4 text-center">
+          <img src="./img/foto4.webp" class="w-100 h-100 rounded-lg mx-auto">
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 items-center xl:mx-30">
+        <div class="p-4 text-center">
+          <img src="./img/foto1.avif" class="w-100 h-100 rounded-lg mx-auto">
+        </div>
+        <div class="p-4 text-lg border-l-4">
+          <h2 class="font-bold text-5xl mx-10 mb-10">Tono inspirado en lo natural</h2>
+          <p class="text-justify mx-10">Mantén los pies en la tierra con una gama de tonos inspirados en la naturaleza.8
+            Elaborados con tintes naturales, cada tono es elegante y muy realista.7</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 items-center xl:mx-30">
+        <div class="p-4 text-lg border-r-4">
+          <h2 class="font-bold text-5xl mx-10 mb-10">HAZ MÁS CON CADA TRAZO</h2>
+          <p class="text-justify mx-10">Cualquier bolígrafo puede escribir palabras, pero el S Pen te ayuda a
+            capturarlas. Resalta la información en un póster o un vídeo y toca para guardar la fecha en tu calendario.16
+          </p>
+        </div>
+        <div class="p-4 text-center">
+          <img src="./img/foto6.webp" class="w-100 h-100 rounded-lg mx-auto">
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 items-center xl:mx-30">
+        <div class="p-4 text-center">
+          <img src="./img/foto7.avif" class="w-80 h-100 rounded-lg mx-auto">
+        </div>
+        <div class="p-4 text-lg border-l-4">
+          <h2 class="font-bold text-5xl mx-10 mb-10">Altamente equipado</h2>
+          <p class="text-justify mx-10">Hemos reunido el sensor más grande de Galaxy, píxeles que absorben la luz y
+            tecnología de estabilización de vídeo en una cámara de calidad profesional, todo ello para responder a la
+            pregunta definitiva: “¿Me pasas las fotos?”. Comparte lo épico.</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 items-center xl:mx-30">
+        <div class="p-4 text-lg border-r-4">
+          <h2 class="font-bold text-5xl mx-10 mb-10">Un futuro mejor a la vista</h2>
+          <p class="text-justify mx-10">La pantalla Dynamic AMOLED 2X ofrece detalles nítidos y coloridos, ya sea con un
+            brillo bajo o a toda potencia.15 Y la tecnología de 120 Hz optimiza de forma inteligente la frecuencia de
+            refresco para suavizar la acción y ahorrar batería.</p>
+        </div>
+        <div class="p-4 text-center">
+          <img src="./img/foto9.avif" class="w-100 h-100 rounded-lg mx-auto">
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 items-center xl:mx-30">
+        <div class="p-4 text-center">
+          <img src="./img/foto8.avif" class="w-100 h-100 rounded-lg mx-auto">
+        </div>
+        <div class="p-4 text-lg border-l-4">
+          <h2 class="font-bold text-5xl mx-10 mb-10">Que empiece el duelo</h2>
+          <p class="text-justify mx-10">Te presentamos la batería de larga duración diseñada para sumar más victorias.
+            Esta batería inteligente de 5.000 mAh (típica) ahorra energía para que puedas jugar y transmitir hasta bien
+            entrada la noche.14</p>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 items-center xl:mx-30">
+        <div class="p-4  text-lg border-r-4">
+          <h2 class="font-bold text-5xl mx-10 mb-10">Guarda la información sensible en una caja fuerte doble.</h2>
+          <p class="text-justify mx-10">Con Knox Vault, tus datos privados están seguros y protegidos. Contraseñas,
+            datos biométricos y otra información crítica para la seguridad están protegidos por un hardware seguro
+            aislado de los demás. No te comprometas y toma las riendas en este mundo impulsado por los datos con la
+            protección integrada de Galaxy.</p>
+        </div>
+        <div class="p-4 text-center">
+          <img src="./img/foto10.webp" class="w-100 h-100 rounded-lg mx-auto">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-white text-black py-10">
+    <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-4 sm:grid-cols-2 gap-10">
+      <div>
+        <h3 class="text-lg font-bold  mb-4">Sobre Nosotros</h3>
+        <p class="text-sm hover:text-gray-500 transition">Somos una empresa dedicada a ofrecer la mejor tecnología
+          móvil.</p>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-4">Enlaces Rápidos</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-gray-400 transition">Inicio</a></li>
+          <li><a href="#" class="hover:text-gray-400 transition">Tienda</a></li>
+          <li><a href="#" class="hover:text-gray-400 transition">Blog</a></li>
+          <li><a href="#" class="hover:text-gray-400 transition">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-4">Contacto</h3>
+        <ul class="space-y-2">
+          <li class="hover:text-gray-400 transition">📍 Dirección: Calle 123, Ciudad</li>
+          <li class="hover:text-gray-400 transition">📞 Teléfono: +34 123 456 789</li>
+          <li class="hover:text-gray-400 transition">📧 Email: contacto@empresa.com</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold mb-4">Suscríbete</h3>
+        <form class="flex flex-col space-y-3">
+          <input type="email" placeholder="Tu correo electrónico"
+            class="px-4 py-2 rounded bg-gray-800 border border-gray-700 text-white focus:outline-none focus:border-blue-500">
+          <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition">
+            Suscribirse
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-10 pt-5 text-center text-sm">
+      <p class="hover:text-gray-400 transition">&copy; 2025 Empresa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    const images = {
+      black: "./img/black.avif",
+      crema: "./img/crema.avif",
+      lavender: "./img/lavender.avif",
+      green: "./img/green.avif"
+    };
+    document.querySelectorAll("input[name='color']").forEach(radio => {
+      radio.addEventListener("change", function () {
+        document.getElementById("phone-image").src = images[this.value];
+      });
+    });
+    const images2 = {
+      black2: "./img/ultra-black.avif",
+      crema2: "./img/ultra-cream.avif",
+      lavender2: "./img/ultra-lavender.avif",
+      green2: "./img/ultra.avif"
+    };
+    document.querySelectorAll("input[name='color2']").forEach(radio => {
+      radio.addEventListener("change", function () {
+        document.getElementById("phone-image2").src = images2[this.value];
+      });
+    });
+    const images3 = {
+      black3: "./img/plus-black.avif",
+      crema3: "./img/plus-cream.avif",
+      lavender3: "./img/plus.avif",
+      green3: "./img/plus-green.avif"
+    };
+    document.querySelectorAll("input[name='color3']").forEach(radio => {
+      radio.addEventListener("change", function () {
+        document.getElementById("phone-image3").src = images3[this.value];
+      });
+    });
+    const images4 = {
+      black4: "./img/s-black.avif",
+      crema4: "./img/s-cream.avif",
+      lavender4: "./img/s-lavender.avif",
+      green4: "./img/s-green.avif"
+    };
+    document.querySelectorAll("input[name='color4']").forEach(radio => {
+      radio.addEventListener("change", function () {
+        document.getElementById("phone-image4").src = images4[this.value];
+      });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const carouselInner = document.getElementById("carousel-inner");
+      const items = document.querySelectorAll(".carousel-item");
+      const indicators = document.querySelectorAll(".indicador");
+      let currentIndex = 0;
+      const totalSlides = items.length;
+      let autoPlayInterval;
+      function updateCarousel(index) {
+        carouselInner.style.transform = `translateX(-${index * 100}%)`;
+        indicators.forEach((btn, i) => btn.classList.toggle("bg-white", i === index));
+      }
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel(currentIndex);
+      }
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel(currentIndex);
+      }
+      function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 5000);
+      }
+      function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+      }
+      document.getElementById("nextBtn").addEventListener("click", () => {
+        stopAutoPlay();
+        nextSlide();
+        startAutoPlay();
+      });
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        stopAutoPlay();
+        prevSlide();
+        startAutoPlay();
+      });
+      indicators.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          stopAutoPlay();
+          currentIndex = index;
+          updateCarousel(currentIndex);
+          startAutoPlay();
+        });
+      });
+      startAutoPlay();
+    });
+    
+    const openModal = document.getElementById('openModal');
+    const closeModal = document.getElementById('closeModal');
+    const modal = document.getElementById('modal');
+    openModal.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      document.body.style.overflow = "hidden"
+    });
+    closeModal.addEventListener('click', () => {
+      modal.classList.add('hidden');
+      document.body.style.overflow = "";
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+    const openModal2 = document.getElementById("openModal2");
+    const closeModal2 = document.getElementById("closeModal2");
+    const modal2 = document.getElementById("modal2");
+    const modalContent2 = modal2.querySelector("div");
+    openModal2.addEventListener("click", () => {
+      modal2.classList.remove("opacity-0", "invisible");
+      modalContent2.classList.remove("slide-out");
+      modalContent2.classList.add("slide-in");
+      document.body.style.overflow = "hidden"
+    });
+    closeModal2.addEventListener("click", () => {
+      modalContent2.classList.remove("slide-in");
+      modalContent2.classList.add("slide-out");
+      setTimeout(() => {
+        modal2.classList.add("opacity-0", "invisible");
+        document.body.style.overflow = "";
+      }, 500);
+    });
+  </script>
+</body>
+</html>
